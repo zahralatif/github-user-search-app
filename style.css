@@ -1,0 +1,231 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    font-size: 1.625rem;
+    line-height: 38px;
+    color: var(--txt-high-contrast);
+    font-weight: 700;
+}
+
+.header__theme__switch-button {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 2.5px;
+}
+
+.header__theme__switch-button span {
+    text-transform: uppercase;
+    color: var(--txt-low-contrast);
+    letter-spacing: 2.5px;
+    font-weight: 700;
+}
+
+.header__theme__switch-button:hover span,
+.header__theme__switch-button:hover path {
+    color: var(--theme-switch-btn-hover);
+    fill: var(--theme-switch-btn-hover);
+}
+
+.header__theme-icon {
+    margin-left: 16px;
+}
+
+.btn {
+    background: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: var(--primary);
+    font-size: 1rem;
+    border-radius: 10px;
+    padding: 13px 24px;
+    font-weight: 700;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+@media (max-width: 650px) {
+    .btn-primary {
+        font-size: 0.875rem;
+        padding: 12.5px 16px;
+    }
+}
+
+.user__section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: var(--background-color-secondary);
+    box-shadow: 0 16px 30px -10px rgba(70, 96, 187, 0.2);
+    border-radius: 15px;
+    padding: 48px;
+}
+
+.user__img {
+    margin-right: 36px;
+    border-radius: 50%;
+    height: 117px;
+    width: 117px;
+}
+
+.user__main {
+    flex-grow: 1;
+}
+
+.user__top {
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    row-gap: 2px;
+}
+
+#user__img-mobile {
+    display: none;
+}
+
+.user__name {
+    color: var(--txt-high-contrast);
+}
+
+.user__joined {
+    color: var(--txt-low-contrast);
+}
+
+.user__username {
+    color: var(--primary);
+}
+
+.user__bio {
+    color: var(--txt-mid-contrast);
+    margin: 20px 0 32px 0;
+}
+
+.user__status {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: var(--background-color);
+    padding: 16px 32px;
+    border-radius: 10px;
+    margin-bottom: 36px;
+}
+
+.user__status__title {
+    color: var(--txt-mid-contrast);
+    margin-bottom: 1px;
+}
+
+.user__status__value {
+    color: var(--txt-high-contrast);
+}
+
+.user__links {
+    display: grid;
+    justify-content: space-between;
+    align-items: flex-start;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    column-gap: 18px;
+    row-gap: 18px;
+}
+
+.user__link__container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+}
+
+.user__link__icon path {
+    fill: var(--txt-mid-contrast);
+}
+
+.user__link {
+    color: var(--txt-mid-contrast);
+    margin-left: 18px;
+}
+
+.user__link__container a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width:768px) {
+    #user-img {
+        display: none;
+    }
+
+    #user__img-mobile {
+        display: block;
+        grid-column: 1/2;
+        grid-row: span 3;
+    }
+
+    .user__top {
+        justify-content: flex-start;
+        grid-template-rows: repeat(3, auto);
+        row-gap: 0;
+    }
+
+    .user__username {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+    .user__name {
+        align-self: flex-end;
+    }
+
+    .user__joined {
+        align-self: flex-end;
+    }
+
+    .user__section {
+        padding: 40px;
+    }
+
+    .user__bio {
+        margin-top: 24px;
+    }
+
+    .user__status {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width:425px) {
+    .user__section {
+        padding: 32px 24px;
+    }
+
+    .user__img {
+        margin-right: 20px;
+        height: 70px;
+        width: 70px;
+    }
+
+    .user__bio {
+        margin: 32px 0 24px 0;
+    }
+
+    .user__status {
+        margin-bottom: 24px;
+        padding: 18px 24px;
+    }
+
+    .user__links {
+        grid-template-columns: 1fr;
+        row-gap: 16px;
+    }
+}
